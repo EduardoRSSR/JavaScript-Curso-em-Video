@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+            body{
+            font: normal 18pt Arial;
+            background-color: black;
+            color: white;
+            }
+        
+            div#somar{
+            margin-top: 10px;
+            }
+          
+            input{
+            font: normal 14pt Arial;
+            width: 100px;
+            }    
+    </style>    
+
+    </head>
+<body>
+    <h1> <strong>Calculando Valores </strong></h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <input type="button" value="Limpar" onclick="limpar()">
+    <div id="somar">
+    </div>
+    
+    <div id="multiplicar">
+    
+    </div>
+
+    <script>
+     
+    function limpar(){
+    var txtn1 = document.querySelector('input#txtn1');    
+    var txtn2 = document.querySelector('input#txtn2');
+    var limpa1 = window.document.querySelector('div#somar');
+    var limpa2 = window.document.querySelector('div#multiplicar');
+    limpa1.innerHTML=null;
+    limpa2.innerHTML=null;  
+
+    document.getElementById('txtn1').value = null;
+    document.getElementById('txtn2').value = null;
+    }
+
+    function somar(){
+    var resultado = window.document.querySelector('div#somar');   
+    var txtn1 = window.document.getElementById('txtn1');
+    var txtn2 = window.document.querySelector('input#txtn2');
+    var n1 = Number(txtn1.value);
+    var n2 = Number(txtn2.value);
+    var soma = n1 + n2;
+    resultado.innerHTML=`A soma entre ${n1} e ${n2} = <strong>${soma}</strong>`;
+    }        
+
+    function multiplicar(){
+    var resultado2 = window.document.querySelector('div#multiplicar');   
+    var txtn1 = window.document.getElementById('txtn1');
+    var txtn2 = window.document.querySelector('input#txtn2');
+    var n1 = Number(txtn1.value);
+    var n2 = Number(txtn2.value);
+    var resmul = n1 * n2;
+    resultado2.innerHTML=`A multiplcação entre ${n1} e ${n2} = <strong>${resmul}</strong>`;
+    }        
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos em DOM - Ex.2</title>
+    <style>
+      body{
+          background-color: rgb(212, 201, 223);
+      }
+        div#area1{
+            font: normal 20pt Arial;
+            background: rgb(216, 0, 0);
+            Color: Black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#area2{
+            font: normal 20pt Arial;
+            background: black;
+            Color: rgb(216, 0, 0);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            }
+        
+            div#contador{
+            font: normal 14pt Arial;
+            background: rgb(160, 94, 94);
+            Color: black;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            }
+
+    </style>
+</head>
+<body>
+<!-- nesse exemplo vamos chamar as funções dentro do script -->
+     <div id ="area1"> 
+        Interaja aqui...       
+    </div>
+
+    <div id ="area2"> 
+        Ou aqui...       
+    </div>
+
+    <div id ="contador"> 
+        teste           
+    </div>
+<script>
+var area1 = window.document.querySelector('div#area1');
+var area2 = window.document.querySelector('div#area2');
+
+area1.addEventListener('click', clicar);
+area1.addEventListener('click', contador);
+area1.addEventListener('mouseenter',entrar);
+area1.addEventListener('mouseenter',contador);
+area1.addEventListener('mouseout',sair);
+area1.addEventListener('mouseout',contador);
+
+area2.addEventListener('click', clicar2);
+area2.addEventListener('mouseenter',entrar2);
+area2.addEventListener('mouseout',sair2);
+area2.addEventListener('click', contador);
+area2.addEventListener('mouseenter',contador);
+area2.addEventListener('mouseout',contador);
+
+var contador = window.document.querySelector('div#contador');
+var n=0;
+contador.innerText = `${n}`
+
+function contador(){
+    n = n+1;
+    contador.innerText = `${n}`
+}
+function clicar(){
+    area1.innerText = 'Clicou!';
+    area1.style.background = 'black';
+    area1.style.color = 'red';
+        }
+function entrar(){
+    area1.innerText = 'Mouse dentro!';
+    }
+function entrar2(){
+        area2.innerText = 'Mouse dentro!';
+}
+function sair2(){
+        area2.innerText = 'Mouse fora!';
+}
+function clicar2(){
+        area2.innerText = 'Clicou!!';
+}
+function sair(){
+var c = window.document.querySelector('div#area1');
+c.innerText = 'Interaja aqui...'
+c.style.background = 'red';
+    c.style.color = 'black';
+}
+
+</script>
+
+</body>
+</html>

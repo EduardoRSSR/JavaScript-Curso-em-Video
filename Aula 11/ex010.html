@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de multas</title>
+    <style>
+    div#n{
+        width: 100px;
+    }
+    div#info{
+        margin-top:  20px;
+        width: auto;
+    }
+    div#mostrar{
+        margin-top: 10px;
+    }
+    div#m{
+        width: 500px;
+        height: 500px;
+    }
+    input#Verificar{
+        margin-left: 10px;
+    }
+    input#txtvel{
+        width: 100px;
+        margin-top: 10px;
+    }
+    input#txtnac{
+        width: 20px;
+    }
+    input{
+        margin-top: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Você é Brasileiro ou Estrangeiro?
+    <br>
+    <input type="button" value="Brasileiro" id="br" onclick="brasileiro()">
+    <input type="button" value="Estrangeiro" id="est" onclick="estrangeiro()">
+
+    <br>
+    <div id="info">
+        
+    </div>
+<br>
+
+<div id="opcao">
+Velocidade do Carro: <input type="number" name="txtvel" id="txtvel"> Km/h.
+<input type="button" value="Verificar" id="Verificar" onclick="calcular()">  
+</div>
+    
+    
+    <div id="mostrar">
+    
+    </div>    
+    <div id="m">
+        
+    </div>
+
+   
+   <script>
+        window.document.getElementById('opcao').style.visibility = "hidden";
+       // var a = window.document.querySelector('div#opcao');
+         //   a.innerHTML = null;       
+        
+      
+        function estrangeiro(){
+        var inf = window.document.querySelector('div#info');
+        window.document.querySelector('div#info').style.visibility = "visible";
+            inf.innerHTML=("Você é Estrangeiro. Não é possível verificar multa!"); 
+            window.document.getElementById('opcao').style.visibility = "hidden";  
+            window.document.getElementById('mostrar').style.visibility = "hidden";
+            window.document.getElementById('m').style.visibility = "hidden";
+          
+      }
+
+
+        function brasileiro(){
+            var inf = window.document.querySelector('div#info');
+            window.document.getElementById('opcao').style.visibility = "visible"; 
+            window.document.querySelector('div#info').style.visibility = "hidden";
+            window.document.getElementById('mostrar').style.visibility = "visible";
+            window.document.getElementById('m').style.visibility = "visible";
+        }
+
+        function calcular(){        
+        var vel = window.document.querySelector('input#txtvel');
+        var veln = Number(vel.value);
+        var m = window.document.querySelector('div#m');
+        if(veln>60){
+        mostrar.innerHTML=(`Sua Velicodade é ${veln} Km/h. Velocidade acima do permitido. MULTADO!`);
+        m.innerHTML=('Dirija com atenção!');
+        }
+        else{
+        mostrar.innerHTML=(`Velocidade ${veln} Km/h, dentro da permitida.`);
+        m.innerHTML=('Dirija com atenção!');
+        }
+    }
+    
+    </script>
+
+</body>
+</html>

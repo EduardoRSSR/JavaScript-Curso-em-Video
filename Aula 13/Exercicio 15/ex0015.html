@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo</title>
+    <link rel="stylesheet" href="estilo.css">
+
+
+</head>
+<body>
+    <header>
+<p>Verificador de Idade</p>
+    </header>
+    
+    <section>
+        <div id="d1" >
+        <p>Ano de Nascimento: <input type="number" name="txtano" id="txtano" min="0"></p>
+        <p>Sexo: 
+            <input type="radio" name=radsex id="masc" checked>
+            <label for="masc">Masculino</label>
+            <input type="radio" name=radsex id="fem"> Feminino</p>
+            <label for="fem"></label>
+        <input type="button" value = "Verificar" id="check" onclick="verificar()">
+        </div>
+        
+        <div id="d2">
+         <p>Preencha os dados acima para ver os resultados.</p>     
+        </div>
+
+         <div id="foto"> <img id=imagem> </div>
+    </section>
+
+    <footer>
+        <p>&copy;CalebSites</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

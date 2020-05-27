@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgba(38, 46, 39, 0.336);
+            color: rgb(92, 7, 7);
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+       /* Testando alterações por MARCA ->getElementsByTagName
+
+       window.document.write('Vamos fazer uns testes abaixo: <br/>')
+        var corpo = window.document.body //joga para uma variável o conteúdo de body
+        corpo.style.color = 'black' // Altera a cor do corpo 
+        var p1 = window.document.getElementsByTagName('p')[1] // joga para variavel p1 o paragrafo selecionado dentro de []
+        p1.style.color = 'blue' // Altera a cor de p1
+        window.document.write('Está escrito assim: ' + p1.innerText + '<br/>') //escreve no documento
+        corpo.style.background = 'gray'
+        document.write(p1.innerText +'<br/>') // innerText escreve o texto apenas. Sem formatação.
+        document.write(p1.innerHTML) //inner.HTML escreve o texto com as 'filhas', com a formatação.
+        */
+    /* Testando alterações por ID    
+    var d= window.document.getElementById('msg')
+    d.style.background = 'green'
+   
+    d.innerText = 'Estou aguardando......'
+    window.document.getElementById('msg').innerText = ('Olá')
+    */
+
+    /* Testando alterações por Name    
+    var e = window.document.getElementsByName('msg')[0]
+    e.innerText = 'Olá testand'
+    */
+
+    /*Testando alteraçao por Class
+
+    var f = window.document.getElementsByClassName('msg')[0]
+        f.innerText = 'Mais um teste!!'
+        f.style.background = 'blue'
+        f.style.color = 'red'
+    */
+    // Lembrando que para os testes é necessário alterar o tipo da variavel "msg". <div Class="msg">Clique em mim</div>
+    
+    /* Testando alteração por Seletor (query.selector) é a maneira recomendada, forma nova no ECMA Script mais atual.
+    
+    var g = window.document.querySelector('div#msg') //quando é id representa por # -> div#msg. quando é classe representa por . -> div.msg
+    g.style.color = 'green'
+    g.style.background = 'red'
+    g.innerText = 'Teste teste teste'
+    */
+    </script>
+</body>
+</html>

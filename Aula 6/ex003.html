@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+    <style> 
+    body{ /* Comentário em CSS */
+        background-color: rgba(61, 0, 0, 0.945);
+        color: rgba(224, 220, 220, 0.548);
+        font: normal 18pt Arial;
+    }   
+    h1{
+        color:black;
+    }
+    </style>
+
+
+        
+</head>
+<body>
+    <h1> Olá Mundo!</h1> <!-- Assim que faz comentario em html-->   
+    <p>Notícias do Mengão</p>
+    
+    <script> 
+   var n1 = Number(window.prompt ('Digite um numero?'));
+   var n2 = Number(window.prompt ('Digite outro numero?'));
+   //Number.parseInt (n1); //Coverte n1 de string para um numero inteiro
+   //Number.parseFloat(n2); //Converte n2 de string para um numero real      
+   //Number(n); Converte n para numero e o JS decide se é inteiro ou não dependendo da entrada.
+   var soma = n1 + n2;
+   window.alert(`A soma entre ${n1} + ${n2} = ${soma}`) // Modo mais curto 
+// window.alert('A soma dos números é = '+ soma + ', certo?'); // + é concatenação
+    </script>
+       
+</body>
+</html>
